@@ -1,7 +1,7 @@
 Twitter API Test
 ================
 
-A php example of the Twitter 1.1 API. With help from:
+A php example of the Twitter 1.1 API.
 
 You'll need to create a `settings.php` file in `app/` with these values (use https://apps.twitter.com/ to generate a new app):
 
@@ -16,5 +16,6 @@ $settings = array(
 ?>
 ```
 
-* http://stackoverflow.com/questions/12916539/simplest-php-example-for-retrieving-user-timeline-with-twitter-api-version-1-1/15314662#15314662
+With help from:
+
 * https://github.com/J7mbo/twitter-api-php
