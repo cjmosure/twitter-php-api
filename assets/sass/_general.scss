@@ -1,36 +1,39 @@
+a {
+	&:hover {
+		text-decoration:none;
+	}
+}
 header {
 	background: $brand-primary;
 	color:#FFF;
 	padding:25px 0px;
-	margin-bottom:25px;
+	//margin-bottom:25px;
 }
-
-.well.tweet {
-	h4 {
-		margin-top:0px;
-	}
-	.meta {
-		font-size:0.75em;
-		color: lighten($text-color,25);
+.tweetList {
+	margin-top:25px;
+	.well.tweet {
+		h4 {
+			margin-top:0px;
+		}
+		.meta {
+			font-size:0.75em;
+			color: lighten($text-color,25);
+		}
 	}
 }
-
-
-.item {
+	
+.carousel-inner {
 	background:#404040;
+	padding: 50px 0px;
 }
 .carousel-caption {
-	padding:100px 0px;
+	padding:50px 0px;
 	color:#FFF;
 	text-shadow:none;
 	position:static;
 	p.lead {
 		padding:25px 0px;
 		font-weight:lighter;
-		font-size:42px;
+		font-size:30px;
 	}
-}
-
-.carousel-indicators li {
-	//border: 1px solid #404040;
 }

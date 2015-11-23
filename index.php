@@ -32,7 +32,44 @@ $tweets = json_decode($response, true);
 	</div>
 </header>
 
-<section>
+
+<section class="tweetSlider">
+	<div id="tweetSlider" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#tweetSlider" data-slide-to="0" class="active"></li>
+	    <li data-target="#tweetSlider" data-slide-to="1" class=""></li>
+	    <li data-target="#tweetSlider" data-slide-to="2" class=""></li>
+	    <li data-target="#tweetSlider" data-slide-to="3" class=""></li>
+	    <li data-target="#tweetSlider" data-slide-to="4" class=""></li>
+	  </ol>
+	  
+	  <div class="carousel-inner" role="listbox">
+
+	  	<?php
+	  	$first = true;
+	  	foreach($tweets as $tweet) {
+	  	?>
+	  		
+	  		<?php if ( $first ) { echo '<div class="item active">'; $first = false; } else { echo '<div class="item">'; } ?>
+		      <?php // <img class="first-slide" src="http://placehold.it/1600x600" alt="First slide"> ?>
+		      <div class="slide"></div>
+		      <div class="container">
+		        <div class="carousel-caption">
+		          <p class="lead"><?php echo $tweet['text'];?></p>
+		        </div>
+		      </div>
+		    </div>
+	  	<?php
+	  	}
+	  	?>
+	  </div>
+	</div>
+</section>
+
+
+
+<section class="tweetList">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12">
@@ -53,50 +90,7 @@ $tweets = json_decode($response, true);
 
 
 
-<section>
-	<div id="tweetSlider" class="carousel slide" data-ride="carousel">
-	  <!-- Indicators -->
-	  <ol class="carousel-indicators">
-	    <li data-target="#tweetSlider" data-slide-to="0" class="active"></li>
-	    <li data-target="#tweetSlider" data-slide-to="1" class=""></li>
-	    <li data-target="#tweetSlider" data-slide-to="2" class=""></li>
-	    <li data-target="#tweetSlider" data-slide-to="3" class=""></li>
-	    <li data-target="#tweetSlider" data-slide-to="4" class=""></li>
-	  </ol>
-	  
-	  <div class="carousel-inner" role="listbox">
 
-	  	<?php
-	  	$first = true;
-	  	foreach($tweets as $tweet) {
-	  		
-	  		if ( $first )
-		    {
-		        echo '<div class="item active">';
-		        $first = false;
-		    }
-		    else
-		    {
-		        echo '<div class="item">';
-		    }
-		    ?>
-
-	  		
-		      <?php // <img class="first-slide" src="http://placehold.it/1600x600" alt="First slide"> ?>
-		      <div class="container">
-		        <div class="carousel-caption">
-		          <div><p class="lead"><?php echo $tweet['text'];?></p></div>
-		        </div>
-		      </div>
-		    </div>
-
-
-	  		<?php
-	  	}
-	  	?>
-	  </div>
-	</div>
-</section>
 
 
 
