@@ -126,7 +126,7 @@ gulp.task('scripts', function() {
  */
 gulp.task('watch', function() {
   browserSync.init({
-    files: ['dist/*','*.html'],
+    files: ['dist/*','*.html','*.php'],
     proxy: manifest.config.devUrl
   });
   gulp.watch('assets/sass/**', ['styles']);

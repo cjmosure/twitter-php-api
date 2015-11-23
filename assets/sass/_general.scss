@@ -1,0 +1,16 @@
+header {
+	background: $brand-primary;
+	color:#FFF;
+	padding:25px 0px;
+	margin-bottom:25px;
+}
+
+.well.tweet {
+	h4 {
+		margin-top:0px;
+	}
+	.meta {
+		font-size:0.75em;
+		color: lighten($text-color,25);
+	}
+}

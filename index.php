@@ -17,25 +17,14 @@ $response = $twitter->setGetfield($getfield)
 $tweets = json_decode($response, true);
 
 
-function arrayPrettyPrint($arr, $level) {
-    foreach($arr as $k => $v) {
-        for($i = 0; $i < $level; $i++)
-            echo("&nbsp;");   // You can change how you indent here
-        if(!is_array($v))
-            echo($k . " => " . $v . "<br/>");
-        else {
-            echo($k . " => <br/>");
-            arrayPrettyPrint($v, $level+1);
-        }
-    }
-}
+
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gulp Template</title>
+	<title>Testing Twitter API</title>
 	<link rel="stylesheet" type="text/css" href="dist/main.min.css">
 </head>
 <body>
@@ -46,7 +35,7 @@ function arrayPrettyPrint($arr, $level) {
 		<div class="row">
 			<div class="col-xs-12">
 				<h2>Twitter 1.1 API Test</h2>
-				<p class="lead">A test of the Twitter API through an php wrapper.</p>
+				<p class="lead">Implementation of Twitter API 1.1 with PHP.</p>
 			</div>
 		</div>
 	</div>
@@ -60,12 +49,9 @@ function arrayPrettyPrint($arr, $level) {
 
 				<?php
 					foreach($tweets as $tweet) {
-						echo '<div class="well">';
-						
+						echo '<div class="well tweet">';
 						echo '<h4>' . $tweet['text'] . '</h4>';
 						echo '<div class="meta">' . $tweet['created_at'] . '&nbsp;by&nbsp;' . $tweet['user']['screen_name'] . '</div>';
-						//var_dump($tweet);
-						//arrayPrettyPrint($tweet, 0);
 						echo '</div>';
 					}
 				?>
